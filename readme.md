@@ -55,3 +55,25 @@ url despatching -->Done
 
 Template -->
 
+
+---- 
+
+`Python3 manage.py makemigration`--> which is responsible for creating new migrations based on the changes you have made to your models.
+
+`Python3 manage.py migrate`--> which is responsible for applying and un applying migration.
+
+`Python3 manage.py sqlmigrate` --> which displays the SQL Statemnets for a migration 
+
+
+`Python3 manage.py showmigrations` --> lists a projcet's migration and their status
+
+---
+### Adding Admin details in the login page.
+---
+* `admin.site.site_header = "UMSRA Admin"`
+* `admin.site.site_title = "UMSRA Admin Portal"`
+* `admin.site.index_title = "Welcome to UMSRA Researcher Portal"`
+---
+
+Template Inheritance --> inheriting a template in all the sub templates can be acalled tempalte inheritance 
+for example if we want the nav bar on every page.

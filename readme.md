@@ -77,3 +77,40 @@ Template -->
 
 Template Inheritance --> inheriting a template in all the sub templates can be acalled tempalte inheritance 
 for example if we want the nav bar on every page.
+
+
+
+---
+Models--> 
+Models defines your databases
+
+After creating models we will migrate and after thayt we will run migration commnands
+
+0. add the model specifications in models.py
+
+1. register model in the admin.py 
+2. register app 
+from apps to settings.py 
+in the foramt 
+Home.apps.HomeConfig(App_name.apps.Class_name) as string 
+3. run `python3 manage.py makemigrations` and you will see an migration file.
+4. migration generates the file that will store this change in the db or creates changes adn store in a file
+5. after this we run `python3 manage.py migrate` apply the pending chanes created by makemigrations.
+6. this will create the table in the data base.
+7. Now you can find the contact table in your admin 
+8. Now you will write the Logic too add data to the database table IN VIEW
+
+9. somewhat like this  `
+def contact(request):
+    if request.method == "POST":
+        name = request.POST.get('name')
+        email = request.POST.get('email')
+        phone = request.POST.get('phone')
+        desc = request.POST.get('desc')
+        contact = Contact(name=name, email=email, phone=phone, desc=desc, date=datetime.today())
+        contact.save()
+    return render(request, 'Contact.html')`
+
+
+
+    `python3 manage.py shell` ---> opens shell for the project
